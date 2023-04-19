@@ -1,0 +1,22 @@
+public class Pessoa {
+  private String nome;
+
+  public Pessoa(String nome) {
+    this.nome = nome;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj == this) { // verifica se o objeto é o mesmo objeto
+      return true;
+    }
+
+    if (!(obj instanceof Pessoa)) { // verifica se o objeto é uma instância de Pessoa
+      return false;
+    }
+
+    Pessoa outraPessoa = (Pessoa) obj; // faz o cast do objeto para Pessoa
+
+    return this.nome.equals(outraPessoa.nome); // compara os nomes das duas pessoas
+  }
+}
